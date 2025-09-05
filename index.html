@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="EMA CHACA0" content="width=device-width, initial-scale=1.0">
+<meta name="EMA" content="width=device-width, initial-scale=1.0">
 <title> E.M.A - Chacao</title>
 
 <!-- Fuentes e íconos -->
@@ -21,10 +21,37 @@ body {
     text-align: center;
 }
 
-/* ===== Cabecera ===== */
-header { padding: 50px 20px; }
+/* ===== Menú superior con logos ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.3);
+}
+header .logo { 
+    height: 130px; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+header .logo:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px #00f0ff);
+}
+
+nav { display: flex; gap: 20px; align-items: center; }
+nav a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+nav a:hover { background: rgba(0,255,255,0.2); }
+
+/* ===== Cabecera título ===== */
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     background: linear-gradient(90deg, #00f0ff, #00ffae, #00f0ff);
     background-clip: text;
@@ -81,10 +108,20 @@ footer {
 </head>
 <body>
 
-<!-- Cabecera -->
+<!-- Menú superior con logos -->
 <header>
-    <h1> Alcaldía de Mar Chacao </h1>
+    <img src="https://archive.org/download/imagen_mejorada_3D/ppp.png" alt="Logo 1" class="logo">
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Estaciones</a>
+        <a href="#">Mapa</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <img src="https://archive.org/download/imagen_mejorada_3D/LOGO%20METEOPMO.png" alt="Logo 2" class="logo">
 </header>
+
+<!-- Cabecera título -->
+<h1>Estación Meteorológica Automática - Chacao</h1>
 
 <!-- Hora -->
 <div class="time-container">
